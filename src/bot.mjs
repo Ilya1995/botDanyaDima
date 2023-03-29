@@ -1,6 +1,13 @@
 import TeleBot from 'telebot';
 
+const CHAT_ID = -612155657;
 const bot = new TeleBot(process.env.TELEGRAM_BOT_TOKEN);
+
+const checkChat = (msg) => {
+  console.log(msg.update?.message?.chat?.id);
+  console.log(msg);
+  return msg.update?.message?.chat?.id !== CHAT_ID;
+};
 
 const convertStringToArray = (fileContent) =>
   fileContent.split('\n').map((str) => {
