@@ -34,5 +34,3 @@ Now you can make some changes in [src/bot.mjs](src/bot.mjs)
 - [api/setWebhook.mjs](api/setWebhook.mjs) — Function for setting WebHook URL
 
 ###### P.S. Don't forget to remove or restrict [api/setWebhook.mjs](api/setWebhook.mjs) function before going to production
-
-Made with 💜 by [Vladislav Ponomarev](https://GitHub.com/PonomareVlad)
