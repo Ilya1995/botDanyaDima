@@ -43,29 +43,9 @@ const statistics = (msg) => {
     return msg.reply.text('Не надо мне писать');
   }
 
-  fs.readFile('db', 'utf8', function (error, fileContent) {
+  fs.readFile('db.txt', 'utf8', function (error, fileContent) {
     if (error) {
-      console.log('Произошла ошибка чтения файла statistics', error);
-
-      fs.readFile('db.txt', 'utf8', function (error, fileContent) {
-        if (error) {
-          console.log(
-            'Произошла ошибка чтения файла statistics2',
-            error,
-            fileContent
-          );
-
-          fs.readFile('./db.txt', 'utf8', function (error, fileContent) {
-            if (error) {
-              console.log(
-                'Произошла ошибка чтения файла statistics3',
-                error,
-                fileContent
-              );
-            }
-          });
-        }
-      });
+      return console.log('Произошла ошибка чтения файла statistics', error);
     }
 
     const pidors = convertStringToArray(fileContent);
